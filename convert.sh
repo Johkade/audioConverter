@@ -5,15 +5,15 @@
 
 for f in ./audiosToConvert/*.mp3
  do 
- fullname = $f
-echo $fullname
+ fullname="$f"
+echo "$fullname"
  filename = "$(basename -- $fullname)"
-echo $filename 
+echo "$filename" 
  
  
  
  
-ffmpeg -i "$f" -c:a libvorbis -q:a 4 "${f/%mp3/ogg}"; done
+ffmpeg -i "$f" -c:a libvorbis -q:a 4 "./converted/${filename/%mp3/ogg}"; done
 
 
 
