@@ -13,8 +13,8 @@ echo $filename
  
  
  
-# ffmpeg -i "$f" -c:a libvorbis -q:a 4 "${f/%mp3/ogg}"; done
-#
+ffmpeg -i "$f" -c:a libvorbis -q:a 4 "${f/%mp3/ogg}"; done
+
 
 
 
