@@ -27,7 +27,7 @@ echo "192 done"
 
 ffmpeg -y -loglevel warning -nostats -i "$f" -c:a libvorbis -q:a 4 -ar 44100 -map a "./converted/${filename/%.wav/_q128_44_stereo.ogg}"
 ffmpeg -y -loglevel warning -nostats -i "$f" -c:a libvorbis -ac 1 -q:a 4 -ar 44100 -map a "./converted/${filename/%.wav/_q128_44_mono.ogg}"
-ffmpeg -y -loglevel warning -nostats -i "$f" -c:a libvorbis -q:a 4 -ar 22050 -map a "./converted/${filename/%.wav/_q129_22_stereo.ogg}"
+ffmpeg -y -loglevel warning -nostats -i "$f" -c:a libvorbis -q:a 4 -ar 22050 -map a "./converted/${filename/%.wav/_q128_22_stereo.ogg}"
 ffmpeg -y -loglevel warning -nostats -i "$f" -c:a libvorbis -ac 1 -q:a 4 -ar 22050 -map a "./converted/${filename/%.wav/_q128_22_mono.ogg}"
 
 echo "128 done"
